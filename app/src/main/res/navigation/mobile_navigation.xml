@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_to_do">
+
+    <fragment
+        android:id="@+id/nav_to_do"
+        android:name="com.example.todoshomework.ui.fragments.ToDoFragment"
+        android:label="fragment_to_do"
+        tools:layout="@layout/fragment_to_do" >
+        <action
+            android:id="@+id/action_nav_to_do_to_nav_saved_to_dos"
+            app:destination="@id/nav_saved_to_dos"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out"
+            app:popEnterAnim="@android:anim/fade_in"
+            app:popExitAnim="@android:anim/fade_out" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/nav_saved_to_dos"
+        android:name="com.example.todoshomework.ui.fragments.SavedToDosDataFragment"
+        android:label="fragment_saved_to_dos_data"
+        tools:layout="@layout/fragment_saved_to_dos_data" />
+    <fragment
+        android:id="@+id/createUserFragment"
+        android:name="com.example.todoshomework.ui.fragments.CreateUserFragment"
+        android:label="fragment_create_user2"
+        tools:layout="@layout/fragment_create_user2" />
+    <fragment
+        android:id="@+id/userFragment2"
+        android:name="com.example.todoshomework.ui.fragments.UserFragment"
+        android:label="fragment_user"
+        tools:layout="@layout/fragment_user" >
+        <action
+            android:id="@+id/action_userFragment2_to_createUserFragment"
+            app:destination="@id/createUserFragment"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out"
+            app:popEnterAnim="@android:anim/fade_in"
+            app:popExitAnim="@android:anim/fade_out" />
+    </fragment>
+</navigation>
